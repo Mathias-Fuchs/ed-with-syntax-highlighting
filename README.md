@@ -1,12 +1,17 @@
 
-ed -with syntax highlighting - A simple ed clone by Mathias Fuchs 2022
+Ed with Syntax Highlighting - A simple ed fork by Mathias Fuchs 2022
+Based on ed 1.18 and GNU source-highlight for C/C++.
+GPLv2.
 
 ![screenshot](screenshot.png)
-Based on ed 1.18.
-To avoid headache, I had to remove the autotools files, and the test suite :), and hand-write a simplistic Makefile for Linux instead.
 
-Syntax highlighting is done by sh.cpp, and including with and linking with GNU's source-highlight
-For instance, on Ubuntu and Debian, do
+I added the files sh.cpp and sh.h to the original ed sources, and modified the function print_line in io.c slighty.
+
+To avoid headache, I had to remove the autotools files, and the test suite :).
+Instead, building happens from a hand-written simplistic Makefile for Linux instead.
+Assumes the GNU source-highlight library installed and available for inclusion and linking.
+
+To build, for instance on Ubuntu/Debian, do
 
 ```
 sudo apt install libsource-highlight-dev
@@ -17,13 +22,8 @@ The result is in a.out.
 Feel free to add other languages than C/C++ etc.
 
 
+
 Original ed README below.
-License : GPL  v2, like ed 1.18.
-
-
-
-
-
 
 
 Description
