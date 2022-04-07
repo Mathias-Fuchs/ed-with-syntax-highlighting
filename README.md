@@ -1,7 +1,7 @@
 
 ed -with syntax highlighting - an simple ed clone by Mathias Fuchs 2022
 
-
+![screenshot](screenshot.png)
 Based on ed 1.18.
 To avoid headache, I had to remove the autotools files, and the test suite :), and hand-write a simplistic Makefile for Linux instead.
 
