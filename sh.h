@@ -6,4 +6,4 @@
 extern "C"
 #endif
 
-void doit(const char* input, int len, char* out, int* nchar);
+void highlight(const char* input, int len, char* out, int* nchar);

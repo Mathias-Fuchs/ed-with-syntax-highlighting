@@ -45,7 +45,7 @@ static void print_line( const char * p, int len, const int pflags )
 
   char out[1000];
   int nbytes;
-  doit(p, len, out, &nbytes);
+  highlight(p, len, out, &nbytes);
   p = out;
   len = nbytes;
 
