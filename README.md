@@ -3,7 +3,7 @@ ed -with syntax highlighting - an simple ed clone by Mathias Fuchs 2022
 
 
 Based on ed 1.18.
-To avoid headache, I had to remove the autotools files, and hand-write a simplistic Makefile for Linux.
+To avoid headache, I had to remove the autotools files, and the test suite :), and hand-write a simplistic Makefile for Linux instead.
 
 Syntax highlighting is done by sh.cpp, and including with and linking with GNU's source-highlight
 For instance, on Ubuntu and Debian, do
@@ -127,32 +127,10 @@ DEVIATIONS
     files (including here documents) or tty's.
 
 
-TESTSUITE
----------
-The files in the 'testsuite' directory with extensions '.ed', '.r', and
-'.err' are used for testing ed. To run the tests, configure the package and
-type 'make check' from the build directory. The tests do not exhaustively
-verify POSIX compliance nor do they verify correct 8-bit or long line
-support.
-
-The test file extensions have the following meanings:
-.ed   Ed script - a list of ed commands.
-.r    Result - the expected output after processing data via an ed script.
-.err  Error - invalid ed commands that should generate an error.
-
-The output of the .ed scripts is written to files with .o extension and
-compared with their corresponding .r result files. The .err scripts should
-exit with non-zero status without altering the contents of the buffer.
-
-If any test fails, the error messages look like:
-
-	*** The script u.ed exited abnormally ***
-or:
-	*** Output u.o of script u.ed is incorrect ***
-
 
 Copyright (C) 1993, 1994 Andrew Moore
 Copyright (C) 2006-2022 Antonio Diaz Diaz.
+Copyright (C) 2022 syntax highlighting fork Mathias Fuchs
 
 This file is free documentation: you have unlimited permission to copy,
 distribute, and modify it.
