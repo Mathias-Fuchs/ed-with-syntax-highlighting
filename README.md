@@ -1,6 +1,6 @@
 
 Ed with Syntax Highlighting - A simple ed fork by Mathias Fuchs 2022
-Based on ed 1.18 and GNU source-highlight for C/C++.
+Based on ed 1.18 and GNU source-highlight for C/C++ on a linux console.
 GPLv2.
 
 ![screenshot](screenshot.png)
@@ -9,7 +9,7 @@ I added the files sh.cpp and sh.h to the original ed sources, and modified the f
 
 To avoid headache, I had to remove the autotools files, and the test suite :).
 Instead, building happens from a hand-written simplistic Makefile for Linux instead.
-Assumes the GNU source-highlight library installed and available for inclusion and linking.
+Assumes the GNU source-highlight library is installed and available for inclusion and linking, for instance from the package manager.
 
 To build, for instance on Ubuntu/Debian, do
 
@@ -18,7 +18,6 @@ sudo apt install libsource-highlight-dev
 make
 ```
 
-The result is in a.out.
 Feel free to add other languages than C/C++ etc.
 
 
