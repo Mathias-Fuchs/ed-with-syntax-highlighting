@@ -1,5 +1,5 @@
 
-ed -with syntax highlighting - an simple ed clone by Mathias Fuchs 2022
+ed -with syntax highlighting - A simple ed clone by Mathias Fuchs 2022
 
 ![screenshot](screenshot.png)
 Based on ed 1.18.
