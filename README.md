@@ -1,6 +1,6 @@
 
 Ed with Syntax Highlighting - A simple ed fork by Mathias Fuchs 2022
-Based on ed 1.18 and GNU source-highlight for C/C++ on a linux console.
+Based on ed 1.18 and GNU source-highlight for C/C++ on a linux console with ANSI escape sequences.
 GPLv2.
 
 ![screenshot](screenshot.png)
@@ -22,7 +22,7 @@ Feel free to add other languages than C/C++ etc.
 
 
 
-Original ed README below.
+Part of the original ed README below.
 
 
 Description
