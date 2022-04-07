@@ -2,6 +2,7 @@
 /* GNU ed - The GNU line editor.
    Copyright (C) 1993, 1994 Andrew Moore, Talke Studio
    Copyright (C) 2006-2022 Antonio Diaz Diaz.
+   Modification for syntax highlighting Copyright (C) 2022 Mathias Fuchs
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
