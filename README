@@ -1,12 +1,24 @@
 
-ed -with syntax highlighting - an ed clone by Mathias Fuchs
-original ed
+ed -with syntax highlighting - an simple ed clone by Mathias Fuchs 2022
 
 
+Based on ed 1.18.
+To avoid headache, I had to remove the autotools files, and hand-write a simplistic Makefile for Linux.
 
-BUILD
-=====
-type make
+Syntax highlighting is done by sh.cpp, and including with and linking with GNU's source-highlight
+For instance, on Ubuntu and Debian, do
+
+```
+sudo apt install libsource-highlight-dev
+make
+```
+
+The result is in a.out.
+Feel free to add other languages than C/C++ etc.
+
+
+Original ed README below.
+License : GPL  v2, like ed 1.18.
 
 
 
