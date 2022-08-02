@@ -41,7 +41,6 @@
 #include "carg_parser.h"
 #include "ed.h"
 
-
 static const char * const program_name = "ed";
 static const char * const program_year = "2022";
 static const char * invocation_name = "ed";		/* default value */
@@ -73,6 +72,7 @@ static void show_help( void )
           "\nUsage: %s [options] [file]\n", invocation_name );
   printf( "\nOptions:\n"
           "  -h, --help                 display this help and exit\n"
+	  "  -H, --highlight            set language for source-highlight\n"
           "  -V, --version              output version information and exit\n"
           "  -E, --extended-regexp      use extended regular expressions\n"
           "  -G, --traditional          run in compatibility mode\n"
@@ -158,6 +158,7 @@ int main( const int argc, const char * const argv[] )
     { 'E', "extended-regexp",      ap_no  },
     { 'G', "traditional",          ap_no  },
     { 'h', "help",                 ap_no  },
+    { 'H', "highlight",            ap_yes },
     { 'l', "loose-exit-status",    ap_no  },
     { 'p', "prompt",               ap_yes },
     { 'r', "restricted",           ap_no  },
@@ -186,6 +187,7 @@ int main( const int argc, const char * const argv[] )
       case 'E': extended_regexp_ = true; break;
       case 'G': traditional_ = true; break;	/* backward compatibility */
       case 'h': show_help(); return 0;
+      case 'H': if( set_lang( arg ) ) break; else return 1;
       case 'l': loose = true; break;
       case 'p': if( set_prompt( arg ) ) break; else return 1;
       case 'r': restricted_ = true; break;

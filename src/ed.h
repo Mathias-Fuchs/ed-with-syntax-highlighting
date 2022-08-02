@@ -108,6 +108,7 @@ int write_file( const char * const filename, const char * const mode,
                 const int from, const int to );
 void reset_unterminated_line( void );
 void unmark_unterminated_line( const line_t * const lp );
+bool set_lang( const char* const s );
 
 /* defined in main.c */
 bool extended_regexp( void );

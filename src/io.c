@@ -27,10 +27,20 @@
 
 static const line_t * unterminated_line = 0;	/* last line has no '\n' */
 static int linenum_ = 0;			/* script line number */
+static const char* lang = "cpp.lang";  /* argument for source-highlight */
 
 int linenum( void ) { return linenum_; }
 
 void reset_unterminated_line( void ) { unterminated_line = 0; }
+
+bool set_lang( const char* const s )
+ {
+ static char buf[516];
+ const int len = strlen( s );
+ memcpy( buf, s, len + 1 );
+ lang = buf;
+ return true;
+ }
 
 void unmark_unterminated_line( const line_t * const lp )
   { if( unterminated_line == lp ) unterminated_line = 0; }
@@ -46,7 +56,7 @@ static void print_line( const char * p, int len, const int pflags )
 
   char out[1000];
   int nbytes;
-  highlight(p, len, out, &nbytes);
+  highlight(p, len, out, &nbytes, lang);
   p = out;
   len = nbytes;
 
